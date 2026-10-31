@@ -17,7 +17,7 @@ def fake_serial(monkeypatch):
     bus = _bus_from_fixture("up16s020_two_devices_syssi.txt")
     created = []
 
-    def factory(port, baud=9600, read_only=False):
+    def factory(port, baud=9600, read_only=False, retry_forever=False):
         tr = MockTransport(bus)
         tr.port, tr.baud, tr.read_only = port, baud, read_only
         created.append(tr)

@@ -46,4 +46,3 @@ schema:
   ha_prefix: str
   high_res_soc: bool
   log_level: list(debug|info|warning|error)
-image: ghcr.io/rafe-walker/jbd-up-addon-{arch}

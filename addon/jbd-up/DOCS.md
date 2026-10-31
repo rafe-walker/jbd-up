@@ -39,3 +39,10 @@ The bridge device publishes `frames_ok`, `crc_errors`, `timeouts`,
 `short_frames`, `resyncs` and `reconnects` as sensors. Rising `crc_errors`
 means wiring/termination; rising `timeouts` means wrong address, baud, A/B
 polarity, or the inverter is also polling the same port.
+
+## Developer note
+
+The add-on image is built by the Supervisor from `addon/jbd-up/` and installs
+`jbd_up` from GitHub at the ref in `build.yaml` (`JBD_UP_REF`, default the
+release tag matching `config.yaml` `version`). Tag the release before publishing
+the add-on, or point `JBD_UP_REF` at `main` while developing.

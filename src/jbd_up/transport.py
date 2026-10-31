@@ -56,13 +56,18 @@ class Transport:
 
 
 class SerialTransport(Transport):
-    def __init__(self, port: str, baud: int = DEFAULT_BAUD, read_only: bool = False) -> None:
+    def __init__(
+        self, port: str, baud: int = DEFAULT_BAUD, read_only: bool = False, retry_forever: bool = False
+    ) -> None:
+        """``retry_forever`` keeps retrying a failed open with back-off (daemon mode); otherwise the first
+        failure raises TransportError so one-shot commands fail fast on a wrong ``--port``."""
         import serial  # local import so tests run without hardware deps being touched
 
         self._serial_mod = serial
         self.port = port
         self.baud = baud
         self.read_only = read_only
+        self.retry_forever = retry_forever
         self._ser = None
         self.reconnects = 0
         self._backoff = 0.5
@@ -86,6 +91,8 @@ class SerialTransport(Transport):
                 return
             except Exception as exc:  # serial.SerialException, OSError
                 self.reconnects += 1
+                if not self.retry_forever:
+                    raise TransportError(f"cannot open {self.port}: {exc}") from exc
                 log.warning("cannot open %s: %s (retry in %.1fs)", self.port, exc, self._backoff)
                 time.sleep(self._backoff)
                 self._backoff = min(self._backoff * 2, 30)

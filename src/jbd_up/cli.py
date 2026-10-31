@@ -25,6 +25,7 @@ from .transport import (
     DEFAULT_BAUD,
     CaptureWriter,
     SerialTransport,
+    TransportError,
     pylon_request,
     read_capture,
     sniff,
@@ -312,7 +313,7 @@ def cmd_discover(args: argparse.Namespace) -> int:
 
 
 def cmd_poll(args: argparse.Namespace) -> int:
-    tr = SerialTransport(args.port, args.baud)
+    tr = SerialTransport(args.port, args.baud, retry_forever=not args.once)
     poller = Poller(
         transport=tr,
         addresses=args.addresses,
@@ -364,6 +365,10 @@ def main(argv: list[str] | None = None) -> int:
         return _main(argv)
     except BrokenPipeError:  # e.g. `jbd-up decode x | head`
         return 0
+    except TransportError as exc:
+        print(f"serial error: {exc}", file=sys.stderr)
+        print("hint: ls /dev/serial/by-id/  (and check the user is in the dialout group)", file=sys.stderr)
+        return 3
 
 
 def _main(argv: list[str] | None) -> int:
