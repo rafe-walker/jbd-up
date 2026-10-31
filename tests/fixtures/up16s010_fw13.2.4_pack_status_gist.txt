@@ -1,0 +1,6 @@
+# REAL CAPTURE - JBD UP16S010 firmware 13.2.4 (Eco-Worthy, pack SN 'JBD48100000'), FC 0x78 reg 0x1000 request + response.
+# Source: https://gist.github.com/PhracturedBlue/7ef619594eaa4c27f4ff068b461865b8 (ecoworthy.md, "Pack Status")
+# also mirrored/extended at https://gist.github.com/dmitrych5/e2fa4ef16b0b483808e4f4089846d0d0
+# Bytes assembled from the gist's byte table; CRC 0x9ABC verifies, so the assembly is exact.
+TX 01 78 10 00 10 a0 00 00 7f b2
+RX 01 78 10 00 10 a0 00 a2 14 8f 00 00 00 04 93 e0 1c 98 1c 98 27 10 27 10 02 78 02 82 00 00 00 64 00 00 00 00 00 00 00 00 00 03 00 04 00 02 00 09 0c db 00 01 0c d9 0c d9 00 04 02 76 00 01 02 74 02 75 02 48 07 d0 01 c0 07 d0 00 10 0c d9 0c d9 0c da 0c d9 0c da 0c da 0c d9 0c da 0c db 0c d9 0c db 0c da 0c da 0c db 0c da 0c d9 00 04 02 74 02 75 02 75 02 76 00 00 00 00 0d 02 4a 42 44 34 38 31 30 30 30 30 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 03 5a a6 00 00 00 00 00 00 00 00 00 00 bc 9a

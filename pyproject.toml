@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jbd-up"
+version = "0.1.0"
+description = "Open-source reader for the JBD UP16S-series BMS (Eco-Worthy and other rebranded 48 V rack LiFePO4 batteries) with MQTT + Home Assistant discovery"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Joshua Bryan", email = "bryanjoshuae@gmail.com" }]
+keywords = ["bms", "jbd", "up16s", "eco-worthy", "lifepo4", "rs485", "modbus", "mqtt", "home-assistant", "pylontech"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Home Automation",
+  "Topic :: System :: Hardware",
+]
+dependencies = [
+  "pyserial>=3.5",
+  "paho-mqtt>=2.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+jbd-up = "jbd_up.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/rafe-walker/jbd-up"
+Issues = "https://github.com/rafe-walker/jbd-up/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+ignore = ["SIM108"]

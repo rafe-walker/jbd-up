@@ -1,0 +1,9 @@
+# REAL CAPTURE - JBD UP16S010 firmware 13.2.4 (Eco-Worthy). 0x2000 pack params 2, 0x2800 RTC, 0x1800 protection params.
+# Source: https://gist.github.com/PhracturedBlue/7ef619594eaa4c27f4ff068b461865b8 (ecoworthy.md)
+# All three CRCs (0x4CF8, 0xE1C9, 0x8217) verify against the gist's byte tables.
+TX 01 78 20 00 20 50 00 00 75 71
+RX 01 78 20 00 20 50 00 40 27 10 27 10 1c 72 1c 72 00 64 00 02 00 96 00 50 00 00 0d dd 00 00 08 e6 00 1e 0c 1c 00 14 0c 80 00 1e 0d 7a 00 50 0d de 00 5a 02 48 03 e8 01 c0 03 e8 00 10 00 d2 00 04 05 34 00 7d 00 00 10 00 f8 4c
+TX 01 78 28 00 28 0f 00 00 46 4b
+RX 01 78 28 00 28 0f 00 0c 07 e9 00 0a 00 1a 00 06 00 2a 00 07 c9 e1
+TX 01 78 18 00 19 00 00 00 7d 44
+RX 01 78 18 00 19 00 00 d0 0e 10 0d 48 0b b8 0e 42 0d 48 0b b8 0a 8c 0b 54 0b b8 09 c4 0b b8 0b b8 16 80 15 40 0b b8 16 d0 15 40 0b b8 10 68 12 c0 03 e8 0f a0 12 c0 0b b8 04 1a 03 e8 07 d0 04 b0 07 d0 02 58 00 0a 05 14 01 f4 02 58 04 1a 03 e8 07 d0 04 b0 07 d0 00 3c 00 0a 05 78 00 c8 00 3c 04 1a 03 e8 0b b8 04 7e 03 e8 0b b8 02 26 02 58 03 e8 01 f4 02 26 03 e8 04 1a 03 e8 03 e8 04 7e 03 e8 03 e8 01 5e 01 90 03 e8 01 2c 01 5e 03 e8 05 aa 05 14 03 e8 06 0e 05 46 03 e8 04 4c 03 e8 0b b8 04 7e 04 4c 0b b8 00 fa 01 2c 0b b8 01 2c 01 5e 0b b8 00 50 00 50 0b b8 00 50 00 50 0b b8 02 58 01 f4 1f 40 03 20 01 f4 1f 40 00 0a 00 0f 07 d0 00 03 00 05 07 d0 17 82

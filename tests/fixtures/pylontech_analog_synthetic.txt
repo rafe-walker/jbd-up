@@ -1,0 +1,10 @@
+# SYNTHETIC - NOT a real capture.  Pylontech LV RS485 ASCII frames built with jbd_up.pylontech.encode().
+# Purpose: exercise the fallback decoder (CID2 0x42 analog, 0x44 alarm) with realistic 16S LFP values
+# (16 cells ~3.32 V, 53.17 V, -12.3 A, 60.95/100 Ah, 12 cycles, 5 temps incl. BMS).
+# Framing/checksum rules from Frankkkkk/python-pylontech; the request frames below match the
+# canonical community examples byte for byte (~20014642E00201FD35).  Replace with a real UP16S-in-Pylon-mode
+# capture as soon as one exists: https://github.com/rafe-walker/jbd-up/issues
+TX ~20014642E00201FD35\r
+RX ~20014600B07E0001100CFE0CF60D030CF60CF80CFB0D000CF50CFC0CFB0CFE0CFB0CFC0CFD0CFD0CFA050B7D0B7C0B770B7D0B7FFF85CFB2EE1604FFFF000C00EE160186A0E061\r
+TX ~20014644E00201FD33\r
+RX ~20014600C0400001100000000000000000000000000000000005000000000000000000000000F195\r

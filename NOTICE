@@ -1,0 +1,13 @@
+jbd-up
+Copyright 2026 Joshua Bryan / Stormhaven Enterprises LLC
+
+This product includes software developed by Joshua Bryan / Stormhaven
+Enterprises LLC (https://theexiledentrepreneur.com).
+
+Protocol knowledge in docs/PROTOCOL.md and tests/fixtures/ is compiled from
+publicly shared community reverse-engineering work. Each source is credited
+in place; see tests/fixtures/README.md and docs/PROTOCOL.md "Sources".
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not
+use this file except in compliance with the License. You may obtain a copy of
+the License at http://www.apache.org/licenses/LICENSE-2.0

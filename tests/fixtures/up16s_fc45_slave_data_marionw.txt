@@ -1,0 +1,5 @@
+# REAL CAPTURE - JBD UP16S (Eco-Worthy 48V 100Ah), FC 0x45 "ReadSlaveData" request + 124-byte response (newer firmware layout).
+# Source: marionw @ https://diysolarforum.com/threads/eco-worthy-48v-100ah-5120wh-lifepo4-server-rack-battery.92299/post-1447436
+# as transcribed in https://gist.github.com/dmitrych5/e2fa4ef16b0b483808e4f4089846d0d0 ("Alternate Pack Status"). CRC 0xC9D3 verifies.
+TX 01 45 00 00 00 54 00 00 d4 d3
+RX 01 45 00 00 00 54 00 7c 00 10 0c d8 0c d8 0c d8 0c d8 0c d8 0c d9 0c d8 0c d8 0c da 0c d7 0c da 0c d9 0c d9 0c d9 0c d9 0c d8 0c da 0c d7 14 8d 00 00 00 00 0b 23 0b 21 27 10 1c 7e 00 02 00 48 00 64 00 00 00 00 00 03 00 00 42 4a 34 44 31 38 30 30 30 30 00 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 e8 03 e8 00 04 0b 25 0b 30 04 02 0b 21 0b 21 0b 22 0b 23 00 00 00 00 00 00 00 00 d3 c9
