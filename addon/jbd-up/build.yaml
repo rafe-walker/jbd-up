@@ -1,0 +1,9 @@
+build_from:
+  aarch64: ghcr.io/home-assistant/aarch64-base-python:3.12-alpine3.20
+  amd64: ghcr.io/home-assistant/amd64-base-python:3.12-alpine3.20
+  armv7: ghcr.io/home-assistant/armv7-base-python:3.12-alpine3.20
+labels:
+  org.opencontainers.image.title: jbd-up
+  org.opencontainers.image.description: JBD UP16S BMS reader with MQTT + HA discovery
+  org.opencontainers.image.source: https://github.com/rafe-walker/jbd-up
+  org.opencontainers.image.licenses: Apache-2.0
