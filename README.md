@@ -108,8 +108,10 @@ the fallback; `--once` does a single cycle.
 
 ### Home Assistant add-on (HA Yellow / HAOS)
 
-Add this repository URL in **Settings → Add-ons → Add-on store → ⋮ →
-Repositories**, install **jbd-up**, pick the USB adapter under `port`, start.
+[![Open your Home Assistant instance and show the add app repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Frafe-walker%2Fjbd-up)
+
+One click adds the repository (or by hand: **Settings → Apps → App store → ⋮ →
+Repositories**, paste this repo's URL). Install **jbd-up**, pick the USB adapter under `port`, start.
 It uses the Supervisor-provided Mosquitto credentials when you leave
 `mqtt_host` as `core-mosquitto`. Details: `addon/jbd-up/DOCS.md`.
 
